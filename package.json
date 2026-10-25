@@ -1,0 +1,52 @@
+{
+  "name": "dsa-visualiser",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Stepwise: an event driven data structure and algorithm visualiser (CS-3810, Two Pointers)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "test:props": "cross-env FC_RUNS=10000 vitest run tests/property",
+    "e2e": "playwright test"
+  },
+  "dependencies": {
+    "d3-ease": "^3.0.1",
+    "d3-interpolate": "^3.0.1",
+    "d3-timer": "^3.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@datastructures-js/priority-queue": "^6.3.1",
+    "@eslint/js": "^9.13.0",
+    "@playwright/test": "1.56.1",
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/d3-ease": "^3.0.2",
+    "@types/d3-interpolate": "^3.0.4",
+    "@types/d3-timer": "^3.0.2",
+    "@types/node": "^22.9.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "fast-check": "^3.22.0",
+    "globals": "^15.11.0",
+    "jsdom": "^25.0.1",
+    "prettier": "^3.3.3",
+    "typescript": "~5.6.3",
+    "typescript-eslint": "^8.12.2",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}

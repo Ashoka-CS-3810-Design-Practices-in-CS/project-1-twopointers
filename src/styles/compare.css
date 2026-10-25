@@ -1,0 +1,171 @@
+/* Compare page: the cost table and the two pairings. */
+
+.compare {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter-r);
+  padding-block: 2rem 3rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.compare__head {
+  display: grid;
+  gap: 0.6rem;
+  max-width: 68ch;
+}
+
+.compare__head h1 {
+  font-size: var(--t-3xl);
+  font-weight: 800;
+}
+
+.compare__head p {
+  color: var(--ink-soft);
+  font-size: var(--t-lg);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--card);
+}
+
+.cost-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: var(--t-sm);
+}
+
+.cost-table th,
+.cost-table td {
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--line);
+}
+
+.cost-table thead th {
+  font-size: var(--t-xs);
+  color: var(--ink-soft);
+  font-weight: 700;
+  background: var(--paper);
+}
+
+.cost-table__group th {
+  background: var(--paper);
+  font-family: var(--font-display);
+  font-size: var(--t-lg);
+  font-weight: 700;
+}
+
+.cost-table__group .glyph {
+  width: 44px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 0.6rem;
+}
+
+.cost-table__tag {
+  margin-left: 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--t-sm);
+  font-weight: 400;
+  color: var(--ink-soft);
+}
+
+.cost-table tbody th[scope='row'] code {
+  color: var(--garnet);
+  font-weight: 600;
+}
+
+.cost-table td.math {
+  font-size: var(--t-lg);
+  white-space: nowrap;
+}
+
+.cost-table__why {
+  color: var(--ink-soft);
+  max-width: 46ch;
+}
+
+.pairs h2,
+.jobs h2 {
+  font-size: var(--t-2xl);
+  margin-bottom: 1rem;
+}
+
+.pairs__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.pair {
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+  padding: 1.1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--card);
+}
+
+.pair h3 {
+  font-size: var(--t-xl);
+}
+
+.pair p {
+  color: var(--ink-soft);
+}
+
+.pair__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.jobs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+}
+
+.jobs__list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) minmax(0, 1.6fr);
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+
+.jobs__need {
+  font-weight: 700;
+}
+
+.jobs__pick {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--t-lg);
+}
+
+.jobs__why {
+  color: var(--ink-soft);
+  font-size: var(--t-sm);
+}
+
+@media (max-width: 760px) {
+  .pairs__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .jobs__list li {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.2rem;
+  }
+}

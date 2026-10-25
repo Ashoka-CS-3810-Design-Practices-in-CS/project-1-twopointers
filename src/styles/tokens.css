@@ -1,0 +1,146 @@
+/*
+  Stepwise design tokens.
+
+  Layout idea: a tutor's desk. Controls on the left, the structure on a
+  paper "stage" in the middle with the tutor's note right under it, and a
+  notebook column on the right with what is happening, the code and the cost.
+
+  Colour roles
+    paper / card / stage  warm linen surfaces
+    ink                   espresso text
+    garnet                actions, brand, the path being followed
+    marigold              the element being looked at right now
+    sage                  done / visited
+    apricot               waiting in a queue or stack
+    moss / brick          success and problems in messages
+
+  Type
+    display  Alegreya: headings, the step note, Big-O
+    body     Atkinson Hyperlegible: everything you read and click
+    code     JetBrains Mono: pseudocode only
+*/
+
+:root {
+  --paper: #f4ece2;
+  --card: #fffaf3;
+  --stage: #fbf5ec;
+  --sunken: #efe4d6;
+  --ink: #2b1e19;
+  --ink-soft: #6b5a4f;
+  --ink-faint: #9a887b;
+  --line: #e2d3c2;
+  --line-strong: #cdb9a4;
+
+  --garnet: #8a2e3b;
+  --garnet-ink: #fff6f2;
+  --garnet-soft: #f3dcdc;
+  --marigold: #e3a23b;
+  --marigold-soft: #fbe6bf;
+  --sage: #6f8a63;
+  --sage-soft: #dde6d3;
+  --apricot: #c4834a;
+  --apricot-soft: #f6dcc2;
+  --moss: #3f7656;
+  --moss-soft: #dcebdf;
+  --brick: #b0432e;
+  --brick-soft: #f6dad2;
+
+  --node-fill: #fffaf3;
+  --node-stroke: #4a3a31;
+  --dot: rgba(120, 90, 60, 0.16);
+  --shadow: 0 1px 2px rgba(60, 35, 20, 0.06), 0 6px 20px rgba(60, 35, 20, 0.06);
+
+  --font-display: 'Alegreya', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+  --font-body: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-code: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* Type scale, roughly a minor third */
+  --t-xs: 0.78rem;
+  --t-sm: 0.875rem;
+  --t-md: 1rem;
+  --t-lg: 1.2rem;
+  --t-xl: 1.45rem;
+  --t-2xl: 1.8rem;
+  --t-3xl: 2.35rem;
+  --t-hero: clamp(2.3rem, 4.6vw, 3.6rem);
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --header-h: 60px;
+
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper: #1a1411;
+    --card: #241c17;
+    --stage: #201813;
+    --sunken: #2c221c;
+    --ink: #f2e7dc;
+    --ink-soft: #bba99b;
+    --ink-faint: #8a786b;
+    --line: #3d3029;
+    --line-strong: #5a4a3f;
+
+    --garnet: #e07c87;
+    --garnet-ink: #2a0f14;
+    --garnet-soft: #4a2228;
+    --marigold: #f0b456;
+    --marigold-soft: #5b4220;
+    --sage: #9db68f;
+    --sage-soft: #33402d;
+    --apricot: #e2a26a;
+    --apricot-soft: #4d3524;
+    --moss: #85c79f;
+    --moss-soft: #22382b;
+    --brick: #f08a70;
+    --brick-soft: #4c2620;
+
+    --node-fill: #2b221c;
+    --node-stroke: #d9c8b8;
+    --dot: rgba(240, 220, 200, 0.07);
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme='dark'] {
+  --paper: #1a1411;
+  --card: #241c17;
+  --stage: #201813;
+  --sunken: #2c221c;
+  --ink: #f2e7dc;
+  --ink-soft: #bba99b;
+  --ink-faint: #8a786b;
+  --line: #3d3029;
+  --line-strong: #5a4a3f;
+
+  --garnet: #e07c87;
+  --garnet-ink: #2a0f14;
+  --garnet-soft: #4a2228;
+  --marigold: #f0b456;
+  --marigold-soft: #5b4220;
+  --sage: #9db68f;
+  --sage-soft: #33402d;
+  --apricot: #e2a26a;
+  --apricot-soft: #4d3524;
+  --moss: #85c79f;
+  --moss-soft: #22382b;
+  --brick: #f08a70;
+  --brick-soft: #4c2620;
+
+  --node-fill: #2b221c;
+  --node-stroke: #d9c8b8;
+  --dot: rgba(240, 220, 200, 0.07);
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.25);
+  color-scheme: dark;
+}
+
+/* Presentation mode: everything a size up for the back row. */
+:root.present {
+  font-size: 118%;
+}
